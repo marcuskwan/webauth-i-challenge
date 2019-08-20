@@ -42,7 +42,7 @@ router.post("/login", (req, res) => {
 
 router.get("/logout", (req, res) => {
   req.session.destroy(() => {
-    res.status(200).json({ bye: "felicia" });
+    res.status(200).json({ message: "session destroyed" });
   });
 });
 
